@@ -1,0 +1,144 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <attr
+    path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.KeyVal']/method[@name='inputStream' and count(parameter)=1 and parameter[1][@type='java.io.InputStream']]"
+    name="managedReturn">
+    Org.Jsoup.IConnectionKeyVal
+  </attr>
+  <attr
+    path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.KeyVal']/method[@name='key' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+    name="managedReturn">
+    Org.Jsoup.IConnectionKeyVal
+  </attr>
+  <attr
+    path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.KeyVal']/method[@name='value' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+    name="managedReturn">
+    Org.Jsoup.IConnectionKeyVal
+  </attr>
+  <attr
+      path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Request']/method[@name='data' and count(parameter)=1 and parameter[1][@type='org.jsoup.Connection.KeyVal']]"
+      name="managedReturn">
+    Org.Jsoup.IConnectionRequest
+  </attr>
+  <attr
+      path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Request']/method[@name='parser' and count(parameter)=1 and parameter[1][@type='org.jsoup.parser.Parser']]"
+      name="managedReturn">
+    Org.Jsoup.IConnectionRequest
+  </attr>
+  <attr
+      path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Request']/method[@name='proxy' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"
+      name="managedReturn">
+    Org.Jsoup.IConnectionRequest
+  </attr>
+  <attr
+      path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Request']/method[@name='proxy' and count(parameter)=1 and parameter[1][@type='java.net.Proxy']]"
+      name="managedReturn">
+    Org.Jsoup.IConnectionRequest
+  </attr>
+  <attr
+      path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Request']/method[@name='timeout' and count(parameter)=1 and parameter[1][@type='int']]"
+      name="managedReturn">
+    Org.Jsoup.IConnectionRequest
+  </attr>
+  <attr
+    path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Response']/method[@name='charset' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+    name="managedReturn">
+    Org.Jsoup.IConnectionResponse
+  </attr>
+  
+  <remove-node path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Request']/method[@name='cookies' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Request']/method[@name='headers' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Response']/method[@name='cookies' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection.Response']/method[@name='headers' and count(parameter)=0]" />
+
+  <attr
+    path="/api/package[@name='org.jsoup']/interface[@name='Connection']/method[@name='request' and count(parameter)=0]"
+    name="name">
+    InvokeRequest
+  </attr>
+  <attr
+    path="/api/package[@name='org.jsoup']/interface[@name='Connection']/method[@name='request' and count(parameter)=1 and parameter[1][@type='org.jsoup.Connection.Request']]"
+    name="name">
+    InvokeRequest
+  </attr>
+  <attr
+    path="/api/package[@name='org.jsoup']/interface[@name='Connection']/method[@name='response' and count(parameter)=0]"
+    name="name">
+    InvokeResponse
+  </attr>
+  <attr
+    path="/api/package[@name='org.jsoup']/interface[@name='Connection']/method[@name='response' and count(parameter)=1 and parameter[1][@type='org.jsoup.Connection.Response']]"
+    name="name">
+    InvokeResponse
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.jsoup.nodes']/class[@name='Attributes.Dataset.DatasetIterator']/method[@name='next' and count(parameter)=0]"
+    name="managedReturn">
+    Java.Lang.Object
+  </attr>
+  <remove-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attribute']/method[@name='getKey' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attribute']/method[@name='setKey' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" />
+  <remove-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attribute']/method[@name='setValue' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" />
+  <remove-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attribute']/method[@name='getValue' and count(parameter)=0]" />
+
+  <add-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attribute']">
+    <method abstract="false" deprecated="not deprecated" final="false" name="setKey" native="false" return="void" static="false" synchronized="false" visibility="public">
+      <parameter name="p0" type="java.lang.Object">
+      </parameter>
+    </method>
+  </add-node>
+  <add-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attribute']">
+    <method abstract="false" deprecated="not deprecated" final="false" name="getKey" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+    </method>
+  </add-node>
+  <add-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attribute']">
+    <method abstract="false" deprecated="not deprecated" final="false" name="setValue" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+      <parameter name="p0" type="java.lang.Object">
+      </parameter>
+    </method>
+  </add-node>
+  <add-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attribute']">
+    <method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+    </method>
+  </add-node>
+
+  <attr
+    path="/api/package[@name='org.jsoup.nodes']/class[@name='Attributes.Dataset.EntrySet']"
+    name="managedName">
+    InvokeEntrySet
+  </attr>
+
+  <remove-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attributes.Dataset']/method[@name='entrySet' and count(parameter)=0]" />
+
+  <add-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attributes.Dataset']">
+    <method abstract="false" deprecated="not deprecated" final="false" name="entrySet" native="false" return="System.Collections.ICollection" static="false" synchronized="false" visibility="public">
+    </method>
+  </add-node>
+
+  <attr
+    path="/api/package[@name='org.jsoup.select']/class[@name='Evaluator.Matches']"
+    name="managedName">
+    InvokeMatches
+  </attr>
+
+
+  <attr
+    path="/api/package[@name='org.jsoup.parser']/class[@name='TreeBuilder']"
+    name="visibility">
+    public
+  </attr>
+
+  <attr
+    path="/api/package[@name='org.jsoup.parser']/class[@name='Token']"
+    name="visibility">
+    public
+  </attr>
+  
+</metadata>
